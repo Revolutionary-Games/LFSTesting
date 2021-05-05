@@ -2,4 +2,28 @@ version: 1
 
 jobs:
   check:
-    - command: echo test
+    image: test/lfstesting:v1
+    cache:
+      loadFrom:
+        - v1-{Branch}-general
+        - v1-main-general
+      writeTo: v1-{Branch}-general
+    steps:
+      - run:
+          name: Echo stuff
+          command: echo test
+      - run: "true"
+      - run:
+          name: Timed streams
+          command: |
+            echo Started
+            sleep 1
+            echo 1
+            sleep 5
+            echo 2
+            sleep 5
+            echo 3
+            sleep 5
+            echo 4
+            sleep 5
+            echo Done. Hopefully these lines arrived in a timely manner
