@@ -12,7 +12,8 @@ jobs:
       - run:
           name: Echo stuff
           command: echo test
-      - run: "true"
+      - run:
+          command: "true"
       - run:
           name: Timed streams
           command: |
