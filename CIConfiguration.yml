@@ -13,7 +13,7 @@ jobs:
           name: Echo stuff
           command: echo test
       - run:
-          command: "true"
+          command: "random_script.rb"
       - run:
           name: Timed streams
           command: |
