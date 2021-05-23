@@ -8,6 +8,8 @@ jobs:
         - v1-{Branch}-general
         - v1-main-general
       writeTo: v1-{Branch}-general
+      shared:
+        .git/lfs/objects: v1-lfs
     steps:
       - run:
           name: Echo stuff
