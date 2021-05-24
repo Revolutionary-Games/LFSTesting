@@ -1,4 +1,4 @@
 # LFSTesting
 A repository for testing ThriveDevCenter LFS functionality
 
-Now with basic CI pipeline test.
+Now with CI executor testing.
