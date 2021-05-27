@@ -16,7 +16,7 @@ jobs:
           command: echo test
       - run:
           name: Test env variable
-          command: echo we got: $SOME_RANDOM_VARIABLE
+          command: "echo we got: $SOME_RANDOM_VARIABLE"
       - run:
           command: "random_script.rb"
       - run:
