@@ -2,4 +2,4 @@
 A repository for testing ThriveDevCenter LFS functionality
 
 Now with CI executor testing.
-And PR checking.
+And PR + fork checking.
