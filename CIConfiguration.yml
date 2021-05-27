@@ -15,6 +15,9 @@ jobs:
           name: Echo stuff
           command: echo test
       - run:
+          name: Test env variable
+          command: echo we got: $SOME_RANDOM_VARIABLE
+      - run:
           command: "random_script.rb"
       - run:
           name: Timed streams
