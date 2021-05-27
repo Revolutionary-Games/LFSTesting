@@ -1,0 +1,32 @@
+version: 1
+
+jobs:
+  check:
+    image: test/lfstesting:v1
+    cache:
+      loadFrom:
+        - v1-{Branch}-general
+        - v1-main-general
+      writeTo: v1-{Branch}-general
+      shared:
+        .git/lfs/objects: v1-lfs
+    steps:
+      - run:
+          name: Echo stuff
+          command: echo test
+      - run:
+          command: "random_script.rb"
+      - run:
+          name: Timed streams
+          command: |
+            echo Started
+            sleep 1
+            echo 1
+            sleep 5
+            echo 2
+            sleep 5
+            echo 3
+            sleep 5
+            echo 4
+            sleep 5
+            echo Done. Hopefully these lines arrived in a timely manner
