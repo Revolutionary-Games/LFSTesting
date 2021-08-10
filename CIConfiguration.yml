@@ -26,7 +26,7 @@ jobs:
           command: "random_script.rb"
       - run:
           name: Fail intentionally
-          command: false && false
+          command: false || false
       - run:
           when: always
           name: Check changes (always)
