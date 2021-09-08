@@ -6,4 +6,3 @@ And different secrets for fork builds.
 
 
 Seems pretty good. Except the duplicate comments.
-And this time there should be no comments.
