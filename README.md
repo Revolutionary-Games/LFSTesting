@@ -5,4 +5,4 @@ Now with CI executor testing including PR and fork checking.
 And different secrets for fork builds.
 
 
-Seems pretty good.
+Seems pretty good. Except the duplicate comments.
