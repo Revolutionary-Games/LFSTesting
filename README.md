@@ -5,4 +5,4 @@ Now with CI executor testing including PR and fork checking.
 And different secrets for fork builds.
 
 
-Testing CLA stuff for me...
+Seems pretty good.
