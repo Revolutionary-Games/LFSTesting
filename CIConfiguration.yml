@@ -25,18 +25,16 @@ jobs:
       - run:
           command: "random_script.rb"
       - run:
-          name: Fail intentionally
-          command: false
-      - run:
-          when: always
-          name: Check changes (always)
+          name: Timed streams
           command: |
-            git diff > diff.patch
-            if grep -q '[^[:space:]]' < diff.patch; then
-                echo "Patch:"
-                cat diff.patch
-                exit 1
-            else
-                echo "No changes made"
-                rm -f diff.patch
-            fi
+            echo Started
+            sleep 1
+            echo 1
+            sleep 5
+            echo 2
+            sleep 5
+            echo 3
+            sleep 5
+            echo 4
+            sleep 5
+            echo Done. Hopefully these lines arrived in a timely manner
